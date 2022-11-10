@@ -8,13 +8,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <RouterLink class="nav-link active" to="/">Home</RouterLink>
+                        <RouterLink active-class="active" class="nav-link" to="/">Home</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/gifs">Gifs</RouterLink>
+                        <RouterLink active-class="active" class="nav-link" to="/gifs">Gifs</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/stickers">Stickers</RouterLink>
+                        <RouterLink active-class="active" class="nav-link" to="/stickers">Stickers</RouterLink>
                     </li>
                 </ul>
             </div>
