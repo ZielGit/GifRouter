@@ -12,7 +12,7 @@ export default {
 <template>
   <Navbar />
 
-  <div class="container mt-3 border">
+  <div class="container mt-3 border text-center">
     <RouterView />
   </div>
 </template>

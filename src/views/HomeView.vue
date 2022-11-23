@@ -18,7 +18,9 @@ export default {
     async getRamdonGif(){
       const data = await fetch("https://api.giphy.com/v1/gifs/random?api_key=IGvt90bSMcE0dhKhcT4uLHTycvybOecy");
       const res = await data.json();
-      console.log(res);
+      
+      this.img = res.data.images.original.url;
+      this.name = res.data.title;
     },
   }
 }
