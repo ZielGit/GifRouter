@@ -13,7 +13,6 @@
                     >
                     <div class="card-body">
                         <h4 class="card-title">{{ gif.title }}</h4>
-                        <a href="#" class="btn btn-primary">Download</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +30,7 @@ export default {
     },
     methods: {
         async getGifs() {
-            const res = await fetch("https://api.giphy.com/v1/gifs/search?api_key=IGvt90bSMcE0dhKhcT4uLHTycvybOecy&q=pikachu&limit=50");
+            const res = await fetch("https://api.giphy.com/v1/gifs/search?api_key=IGvt90bSMcE0dhKhcT4uLHTycvybOecy&q=pikachu");
             const { data } = await res.json();
 
             this.gifs = data;
