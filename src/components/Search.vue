@@ -1,11 +1,11 @@
 <template>
     <div>
-        <form @submit.prevent="$emit('buscar', busqueda)" class="row g-3">
+        <form @submit.prevent="getData" class="row g-3">
             <div class="col-auto">
                 <label for="" class="col-form-label">Search: </label>
             </div>
             <div class="col-auto">
-                <input v-model="busqueda" class="form-control" type="text">
+                <input v-model.trim="busqueda" class="form-control" type="text">
             </div>
             <div class="col-auto">
                 <button class="btn btn-warning" type="submit">Search</button>
@@ -19,5 +19,11 @@ export default {
     data: () => ({
         busqueda: "",
     }),
+    methods: {
+        getData(){
+            this.$emit('buscar', this.busqueda);
+            this.busqueda = "";
+        }
+    }
 };
 </script>

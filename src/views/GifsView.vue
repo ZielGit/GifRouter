@@ -23,6 +23,11 @@ export default {
     },
     methods: {
         async getGifs(busqueda = "pokemon") {
+            if (busqueda.trim() === "") {
+                alert("Sin busqueda");
+                return;
+            }
+
             const res = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=IGvt90bSMcE0dhKhcT4uLHTycvybOecy&q=${busqueda}`);
             const { data } = await res.json();
             this.gifs = data;
