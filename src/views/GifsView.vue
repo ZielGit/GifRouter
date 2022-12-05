@@ -16,7 +16,7 @@ import Search from '../components/Search.vue';
 
 export default {
     data: () => ({
-        gifs: {},
+        gifs: [],
     }),
     created() {
         this.getGifs();
