@@ -15,6 +15,7 @@
 import Card from '../components/Card.vue';
 import Search from '../components/Search.vue';
 import Loading from '../components/Loading.vue';
+import Swal from 'sweetalert2';
 
 export default {
     data: () => ({
@@ -27,7 +28,14 @@ export default {
     methods: {
         async getStickers(busqueda = "pokemon") {
             if (busqueda.trim() === "") {
-                alert("Sin busqueda");
+                Swal.fire({
+                    title: 'Sin busqueda',
+                    icon: 'error',
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                    timer: 3000,
+                    timerProgressBar: true
+                });
                 return;
             }
 
